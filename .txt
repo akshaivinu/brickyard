@@ -1,0 +1,178 @@
+/app
+  layout.tsx
+  page.tsx (Homepage)
+  /work
+    page.tsx
+    /[category]
+      page.tsx
+      /[slug]
+        page.tsx
+  /about
+    page.tsx
+  /contact
+    page.tsx
+
+/components
+  /layout
+    Navbar.tsx
+    Footer.tsx
+    Container.tsx
+
+  /homepage
+    HeroSection.tsx
+    PhilosophySection.tsx
+    CategoryFeature.tsx
+    FeaturedProjects.tsx
+    MetricsSection.tsx
+    FinalCTA.tsx
+
+  /project
+    ProjectHero.tsx
+    ProjectContentRenderer.tsx
+    blocks/
+      ImageFull.tsx
+      ImageInset.tsx
+      TextBlock.tsx
+      QuoteBlock.tsx
+      VideoBlock.tsx
+      Embed360Block.tsx
+
+  /ui
+    Button.tsx
+    SectionHeading.tsx
+    ScrollProgress.tsx
+
+  /webgl
+    WebGLHero.tsx
+    threeScene.ts
+    useScrollSync.ts
+
+/lib
+  sanityClient.ts
+  queries.ts
+  fetchers.ts
+
+/styles
+  globals.css
+  typography.css
+
+/types
+  project.ts
+  homepage.ts
+
+
+or
+
+/app
+  layout.tsx                # Global layout (dark theme, typography, nav logic)
+  globals.css
+
+  # -------------------------
+  # PUBLIC MARKETING SITE
+  # -------------------------
+
+  /(public)
+    page.tsx                # Homepage
+    /work
+      page.tsx              # All categories overview
+      /[category]
+        page.tsx            # Category page
+        /[slug]
+          page.tsx          # Public project case study
+    /studio
+      page.tsx
+    /contact
+      page.tsx
+
+  # -------------------------
+  # AUTH ROUTES
+  # -------------------------
+
+  /(auth)
+    /login
+      page.tsx
+    /signup
+      page.tsx
+    /forgot-password
+      page.tsx
+
+  # -------------------------
+  # CLIENT PORTAL (PROTECTED)
+  # -------------------------
+
+  /(portal)
+    layout.tsx              # Portal layout (sidebar + top nav state)
+    page.tsx                # Dashboard
+
+    /projects
+      page.tsx              # List all client projects
+      /new
+        page.tsx            # Start new project (multi-step form)
+      /[projectId]
+        page.tsx            # Project detail (files + messages)
+
+    /messages
+      page.tsx
+
+    /settings
+      page.tsx
+
+
+/components
+  /layout
+    Navbar.tsx
+    Footer.tsx
+    PortalSidebar.tsx
+    PortalTopbar.tsx
+    Container.tsx
+
+  /homepage
+    HeroSection.tsx
+    PhilosophySection.tsx
+    CategoryFeature.tsx
+    FeaturedProjects.tsx
+    MetricsSection.tsx
+    FinalCTA.tsx
+
+  /work
+    CategoryGrid.tsx
+    ProjectCard.tsx
+
+  /project-public
+    ProjectHero.tsx
+    ProjectContentRenderer.tsx
+    blocks/
+      ImageFull.tsx
+      ImageInset.tsx
+      TextBlock.tsx
+      QuoteBlock.tsx
+      VideoBlock.tsx
+      Embed360Block.tsx
+
+  /portal
+    DashboardOverview.tsx
+    ProjectList.tsx
+    ProjectCardPortal.tsx
+    StartProjectForm.tsx
+    StepService.tsx
+    StepDetails.tsx
+    StepFiles.tsx
+    StepReview.tsx
+    FileUploader.tsx
+    MessageThread.tsx
+    StatusBadge.tsx
+
+  /ui
+    Button.tsx
+    Input.tsx
+    Textarea.tsx
+    Select.tsx
+    Modal.tsx
+    ScrollProgress.tsx
+    SectionHeading.tsx
+    Divider.tsx
+
+  /webgl
+    WebGLHero.tsx
+    threeScene.ts
+    useScrollSync.ts
